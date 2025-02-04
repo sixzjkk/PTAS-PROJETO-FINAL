@@ -2,11 +2,11 @@
 
 ## Descrição do Projeto
 
-Esta é uma API RESTful para gerenciamento de *reservas de eventos* em um salão de festas. Permite adicionar, consultar, alterar e excluir reservas, utilizando um banco de dados em memória (um array de objetos). A API facilita o controle de eventos como casamentos, aniversários e confraternizações.
+API de gerenciamento de *reservas de eventos* em um salão de festas. Com as funções de adicionar, consultar, alterar e excluir reservas.
 
 ## Instalação
 
-Para rodar o projeto localmente, siga os passos abaixo:
+Para rodar o projeto:
 
 1. **Instale as dependências:**
    ```sh
@@ -19,19 +19,15 @@ Para rodar o projeto localmente, siga os passos abaixo:
    node server.js
    ```
 
-O servidor iniciará na porta `3000` por padrão.
+O servidor roda na porta `3000`.
 
-## Uso
-
-Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
-
-### Rotas da API
+### Rotas:
 
 - **Listar Reservas** (`GET /reservations`): Retorna todas as reservas.
-- **Buscar Reserva por ID** (`GET /reservations/:id`): Retorna uma reserva específica pelo ID.
-- **Adicionar Nova Reserva** (`POST /reservations`): Cria uma nova reserva.
+- **Buscar Reserva por ID** (`GET /reservations/:id`): Retorna uma reserva específicada pelo ID.
+- **Adicionar Nova Reserva** (`POST /reservations`): Cadastra uma nova reserva.
 - **Atualizar Reserva Existente** (`PUT /reservations/:id`): Atualiza uma reserva existente.
-- **Excluir Reserva** (`DELETE /reservations/:id`): Remove uma reserva da lista.
+- **Excluir Reserva** (`DELETE /reservations/:id`): Remove uma reserva.
 
 ### Exemplo de Requisição
 
@@ -48,7 +44,7 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
 
 1. **Listar todas as reservas:**
    - Requisição: `GET http://localhost:3000/reservations`
-   - Resposta esperada:
+   - Resposta:
      ```json
      [
        {
@@ -66,9 +62,8 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
      ]
      ```
 
-2. **Adicionar uma nova reserva:**
+2. **Cadastrar nova reserva:**
    - Requisição: `POST http://localhost:3000/reservations`
-   - Corpo da requisição:
      ```json
      {
        "clientName": "Mary Smith",
@@ -76,7 +71,7 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
        "eventType": "Birthday"
      }
      ```
-   - Resposta esperada:
+   - Resposta:
      ```json
      {
        "id": 3,
@@ -86,9 +81,8 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
      }
      ```
 
-3. **Atualizar uma reserva existente:**
+3. **Atualizar reserva existente:**
    - Requisição: `PUT http://localhost:3000/reservations/1`
-   - Corpo da requisição:
      ```json
      {
        "clientName": "John Doe",
@@ -96,7 +90,7 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
        "eventType": "Wedding Renewal"
      }
      ```
-   - Resposta esperada:
+   - Resposta:
      ```json
      {
        "id": 1,
@@ -108,7 +102,7 @@ Para testar a API, você pode utilizar ferramentas como Postman ou Insomnia.
 
 4. **Excluir uma reserva:**
    - Requisição: `DELETE http://localhost:3000/reservations/1`
-   - Resposta esperada:
+   - Resposta:
      ```json
      {
        "message": "Reservation successfully removed"
