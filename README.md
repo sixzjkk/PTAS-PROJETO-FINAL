@@ -1,6 +1,6 @@
 # API de Reservas de Eventos
 
-## Descrição do Projeto
+## Descrição
 
 API de gerenciamento de *reservas de eventos* em um salão de festas. Com as funções de adicionar, consultar, alterar e excluir reservas.
 
